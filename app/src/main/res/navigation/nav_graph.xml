@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.trungdaniel.screenrecorder.SplashFragment"
+        android:name="com.trungdaniel.screenrecorder.screens.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash">
         <action
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.trungdaniel.screenrecorder.SettingsFragment"
+        android:name="com.trungdaniel.screenrecorder.screens.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings">
         <action

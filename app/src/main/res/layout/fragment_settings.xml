@@ -1,213 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
+    android:orientation="vertical"
+    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_settings"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
-        android:minHeight="?attr/actionBarSize"
-        tools:ignore="MissingConstraints">
+        android:layout_height="match_parent"
+        tools:context=".screens.SettingsFragment">
 
-        <TextView
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:minHeight="?attr/actionBarSize"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/lato_bold"
+                android:text="Settings"
+                android:textColor="#2FA1B3"
+                android:textSize="20dp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/lato_bold"
-            android:text="Settings"
-            android:textColor="#2FA1B3"
-            android:textSize="20dp" />
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.11" />
 
-    </androidx.appcompat.widget.Toolbar>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.11" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        <LinearLayout
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.35" />
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2">
 
-    <LinearLayout
+            <ImageView
 
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_setting_pro"></ImageView>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
 
         <ImageView
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/img_setting_pro"></ImageView>
-
-    </LinearLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_frame_pro"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/lato_bold"
-        android:text="PRO VERSION"
-        android:textColor="#F2C94C"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@color/colorLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline5"></View>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/view">
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout3"
-            android:layout_width="match_parent"
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/borders"
-            android:paddingVertical="10dp">
+            android:src="@drawable/ic_frame_pro"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.5" />
 
-            <ImageView
-                android:id="@+id/ic_touch_app"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_touch_app">
-
-            </ImageView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/ic_touch_app"
-                android:fontFamily="@font/lato_medium"
-                android:text="Touch"
-                android:textColor="@color/colorBlack"></TextView>
-
-            <ImageView
-                android:id="@+id/img_vector1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="30dp"
-                android:src="@drawable/ic_vector"></ImageView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignRight="@+id/img_vector1"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
-                android:text="Style 1"
-                android:textColor="@color/colorXam"></TextView>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout2"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/borders"
-            android:paddingVertical="10dp">
+            android:fontFamily="@font/lato_bold"
+            android:text="PRO VERSION"
+            android:textColor="#F2C94C"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-            <ImageView
-                android:id="@+id/Watermark"
-                android:layout_width="wrap_content"
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline5"></View>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_donut_small">
+                android:background="@drawable/borders"
+                android:paddingVertical="10dp">
 
-            </ImageView>
+                <ImageView
+                    android:id="@+id/ic_touch_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_touch_app">
 
-            <TextView
-                android:layout_width="wrap_content"
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ic_touch_app"
+                    android:fontFamily="@font/lato_medium"
+                    android:text="Touch"
+                    android:textColor="@color/colorBlack"></TextView>
+
+                <ImageView
+                    android:id="@+id/img_vector1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/ic_vector"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/img_vector1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:text="Style 1"
+                    android:textColor="@color/colorXam"></TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/Watermark"
-                android:fontFamily="@font/lato_medium"
-                android:text="Watermark"
-                android:textColor="@color/colorBlack"></TextView>
+                android:background="@drawable/borders"
+                android:paddingVertical="10dp">
 
-            <ImageView
-                android:id="@+id/img_vector2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="30dp"
-                android:src="@drawable/ic_vector"></ImageView>
+                <ImageView
+                    android:id="@+id/Watermark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_donut_small">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/Watermark"
+                    android:fontFamily="@font/lato_medium"
+                    android:text="Watermark"
+                    android:textColor="@color/colorBlack"></TextView>
+
+                <ImageView
+                    android:id="@+id/img_vector2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/ic_vector"></ImageView>
 
 
-        </RelativeLayout>
-
-    </LinearLayout>
+            </RelativeLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
